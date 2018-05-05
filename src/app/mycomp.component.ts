@@ -13,8 +13,13 @@ export class MyComp {
   userDataTitle: string = "User Data";
   myDept: string[];
   myvalue: string = "Vishal";
+  myval: string = "Vishal Patel";
   constructor(userDataService: UserData, myDept: MyDepartment) {
     this.userdata = userDataService.getUserData();
     this.myDept = myDept.getDepartment();
+  }
+  callme($event) {
+    alert("Called");
+    alert($event);
   }
 }

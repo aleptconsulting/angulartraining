@@ -3,7 +3,10 @@
 <p>Pellentesque habitant morbi tristique senectus</p>
 <app-newcomp></app-newcomp>
 Name:
-<input type="text" [value]="myvalue" />
+<input type="text" [value]="myvalue" (input)="myvalue=$event.target.value" /> {{myvalue}}
+
+<input type="text" [(ngModel)]="myval" /> {{myval}}
+<button class="btn btn-info" (click)="callme($event)">Call me</button>
 <br />
 <h3>{{userDataTitle}}</h3>
 <ul>
