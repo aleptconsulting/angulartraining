@@ -8,6 +8,7 @@ import { NewcompComponent } from "./newcomp/newcomp.component";
 import { HeaderComponent } from "./header/header.component";
 import { FooterComponent } from "./footer/footer.component";
 import { FormsModule } from "@angular/forms";
+import { FavoriteComponent } from './favorite/favorite.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { FormsModule } from "@angular/forms";
     MyComp,
     NewcompComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    FavoriteComponent
   ],
   imports: [BrowserModule, FormsModule],
   providers: [UserData, MyDepartment],

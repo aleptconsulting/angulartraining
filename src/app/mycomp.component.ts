@@ -14,6 +14,8 @@ export class MyComp {
   myDept: string[];
   myvalue: string = "Vishal";
   myval: string = "Vishal Patel";
+  selected: boolean = true;
+
   constructor(userDataService: UserData, myDept: MyDepartment) {
     this.userdata = userDataService.getUserData();
     this.myDept = myDept.getDepartment();
