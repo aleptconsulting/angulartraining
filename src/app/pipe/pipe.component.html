@@ -1,3 +1,13 @@
-<p>
-  pipe works!
-</p>
+{{ course.title | uppercase | lowercase }}
+<br /> {{ course.rating | number : '2.2-2' }}
+<br /> {{ course.students | number }}
+<br /> {{ course.price | currency : 'EUR ' : false}}
+<br /> {{ course.releaseDate | date:"MM/dd/yy" }}
+<br /> {{ course.description | summary }}
+
+<br />
+<code>
+  <pre>
+{{ course | json}}    
+  </pre>
+</code>

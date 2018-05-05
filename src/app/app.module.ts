@@ -8,8 +8,9 @@ import { NewcompComponent } from "./newcomp/newcomp.component";
 import { HeaderComponent } from "./header/header.component";
 import { FooterComponent } from "./footer/footer.component";
 import { FormsModule } from "@angular/forms";
-import { FavoriteComponent } from './favorite/favorite.component';
-import { PipeComponent } from './pipe/pipe.component';
+import { FavoriteComponent } from "./favorite/favorite.component";
+import { PipeComponent } from "./pipe/pipe.component";
+import { SummaryPipe } from "./custompipes/summary.pipe";
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { PipeComponent } from './pipe/pipe.component';
     HeaderComponent,
     FooterComponent,
     FavoriteComponent,
-    PipeComponent
+    PipeComponent,
+    SummaryPipe
   ],
   imports: [BrowserModule, FormsModule],
   providers: [UserData, MyDepartment],
