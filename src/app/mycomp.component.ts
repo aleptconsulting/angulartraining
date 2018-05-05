@@ -1,5 +1,6 @@
 import { Component } from "@angular/core";
 import { UserData } from "./userdata.service";
+import { MyDepartment } from "./mydepartement.service";
 
 @Component({
   selector: "my-comp",
@@ -8,7 +9,11 @@ import { UserData } from "./userdata.service";
 export class MyComp {
   title: string = "Hello from Vishal(2) and Narendra";
   userdata: string[];
-  constructor(private userDataService: UserData) {
+  departmentTitle: string = "Departments";
+  userDataTitle: string = "User Data";
+  myDept: string[];
+  constructor(userDataService: UserData, myDept: MyDepartment) {
     this.userdata = userDataService.getUserData();
+    this.myDept = myDept.getDepartment();
   }
 }

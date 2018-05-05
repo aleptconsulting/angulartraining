@@ -1,7 +1,14 @@
 <h1>{{title}}</h1>
 <p>Pellentesque habitant morbi tristique senectus</p>
+<h3>{{userDataTitle}}</h3>
 <ul>
     <li *ngFor="let udObj of userdata">
         {{udObj}}
+    </li>
+</ul>
+<h3>{{departmentTitle}}</h3>
+<ul>
+    <li *ngFor="let ddObj of myDept">
+        {{ddObj}}
     </li>
 </ul>
