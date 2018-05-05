@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { UserData } from "./userdata.service";
 
 @Component({
   selector: "my-comp",
@@ -6,4 +7,8 @@ import { Component } from "@angular/core";
 })
 export class MyComp {
   title: string = "Hello from Vishal(2) and Narendra";
+  userdata: string[];
+  constructor(private userDataService: UserData) {
+    this.userdata = userDataService.getUserData();
+  }
 }
