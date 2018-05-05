@@ -3,7 +3,7 @@
 <br /> {{ course.students | number }}
 <br /> {{ course.price | currency : 'EUR ' : false}}
 <br /> {{ course.releaseDate | date:"MM/dd/yy" }}
-<br /> {{ course.description | summary }}
+<br /> {{ course.description | summary:30 }}
 
 <br />
 <code>
