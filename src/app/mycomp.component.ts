@@ -12,6 +12,7 @@ export class MyComp {
   departmentTitle: string = "Departments";
   userDataTitle: string = "User Data";
   myDept: string[];
+  myvalue: string = "Vishal";
   constructor(userDataService: UserData, myDept: MyDepartment) {
     this.userdata = userDataService.getUserData();
     this.myDept = myDept.getDepartment();
