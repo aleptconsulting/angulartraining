@@ -11,7 +11,13 @@ import { FormsModule } from "@angular/forms";
 import { FavoriteComponent } from "./favorite/favorite.component";
 import { PipeComponent } from "./pipe/pipe.component";
 import { SummaryPipe } from "./custompipes/summary.pipe";
-import { FormsdemoComponent } from './formsdemo/formsdemo.component';
+import { FormsdemoComponent } from "./formsdemo/formsdemo.component";
+import { HttpModule } from "@angular/http";
+import { HttpService } from "./http.service";
+import { LoginComponent } from "./login/login.component";
+import { UserdetailsComponent } from "./userdetails/userdetails.component";
+import { ServicesComponent } from "./services/services.component";
+import { routing } from "./app.routing";
 
 @NgModule({
   declarations: [
@@ -23,9 +29,12 @@ import { FormsdemoComponent } from './formsdemo/formsdemo.component';
     FavoriteComponent,
     PipeComponent,
     SummaryPipe,
-    FormsdemoComponent
+    FormsdemoComponent,
+    LoginComponent,
+    UserdetailsComponent,
+    ServicesComponent
   ],
-  imports: [BrowserModule, FormsModule],
+  imports: [BrowserModule, FormsModule, HttpModule, routing],
   providers: [UserData, MyDepartment],
   bootstrap: [AppComponent, MyComp]
 })
