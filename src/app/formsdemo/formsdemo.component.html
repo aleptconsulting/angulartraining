@@ -1,0 +1,19 @@
+<form (ngSubmit)="formsubmit(f)" #f="ngForm">
+  <div class="form-group">
+    <label for="txtUsername">Username</label>
+    <input name="username" ngModel type="text" class="form-control" id="txtUsername" placeholder="Username">
+  </div>
+  <div class="form-group">
+    <label for="txtPassword">Password</label>
+    <input name="password" ngModel type="password" class="form-control" id="txtPassword" placeholder="Password">
+  </div>
+  <div class="form-group">
+    <label for="txtEmail">Email</label>
+    <input name="email" ngModel type="email" class="form-control" id="txtEmail" placeholder="Email">
+  </div>
+  <div class="form-group">
+    <label for="txtCity">City</label>
+    <input name="city" ngModel type="text" class="form-control" id="txtCity" placeholder="City">
+  </div>
+  <button type="submit" class="btn btn-default">Submit</button>
+</form>

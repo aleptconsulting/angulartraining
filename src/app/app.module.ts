@@ -11,6 +11,7 @@ import { FormsModule } from "@angular/forms";
 import { FavoriteComponent } from "./favorite/favorite.component";
 import { PipeComponent } from "./pipe/pipe.component";
 import { SummaryPipe } from "./custompipes/summary.pipe";
+import { FormsdemoComponent } from './formsdemo/formsdemo.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { SummaryPipe } from "./custompipes/summary.pipe";
     FooterComponent,
     FavoriteComponent,
     PipeComponent,
-    SummaryPipe
+    SummaryPipe,
+    FormsdemoComponent
   ],
   imports: [BrowserModule, FormsModule],
   providers: [UserData, MyDepartment],
