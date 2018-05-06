@@ -7,6 +7,12 @@ import { NgForm } from "@angular/forms";
   styleUrls: ["./formsdemo.component.css"]
 })
 export class FormsdemoComponent implements OnInit {
+  userdata = {
+    username: "Vishal",
+    password: "vishal",
+    email: "t@t.com",
+    city: "Ahmedabad"
+  };
   constructor() {}
 
   ngOnInit() {}

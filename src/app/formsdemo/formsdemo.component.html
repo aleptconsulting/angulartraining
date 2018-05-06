@@ -1,19 +1,29 @@
 <form (ngSubmit)="formsubmit(f)" #f="ngForm">
   <div class="form-group">
     <label for="txtUsername">Username</label>
-    <input name="username" ngModel type="text" class="form-control" id="txtUsername" placeholder="Username">
+    <input #uname=ngModel name="username" required [(ngModel)]="userdata.username" type="text" class="form-control" placeholder="Username">
+    <div class="ng-invalid" *ngIf="!uname.valid">
+      Username cannot be blank
+    </div>
   </div>
   <div class="form-group">
     <label for="txtPassword">Password</label>
-    <input name="password" ngModel type="password" class="form-control" id="txtPassword" placeholder="Password">
+    <input name="password" [(ngModel)]="userdata.password" type="password" class="form-control" id="txtPassword" placeholder="Password">
   </div>
   <div class="form-group">
     <label for="txtEmail">Email</label>
-    <input name="email" ngModel type="email" class="form-control" id="txtEmail" placeholder="Email">
+    <input #email=ngModel name="email" required email="true" [(ngModel)]="userdata.email" type="email" class="form-control" id="txtEmail"
+      placeholder="Email">
+    <div class="ng-invalid" *ngIf="!email.valid">
+      Email cannot be blank
+    </div>
   </div>
   <div class="form-group">
     <label for="txtCity">City</label>
-    <input name="city" ngModel type="text" class="form-control" id="txtCity" placeholder="City">
+    <input #city=ngModel required name="city" [(ngModel)]="userdata.city" type="text" class="form-control" id="txtCity" placeholder="City">
+    <div class="ng-invalid" *ngIf="!city.valid">
+      City cannot be blank
+    </div>
   </div>
   <button type="submit" class="btn btn-default">Submit</button>
 </form>
