@@ -12,18 +12,21 @@
   </div>
   <div class="form-group">
     <label for="txtEmail">Email</label>
-    <input #email=ngModel name="email" required email="true" [(ngModel)]="userdata.email" type="email" class="form-control" id="txtEmail"
+    <input #temail=ngModel name="email" required email="true" [(ngModel)]="userdata.email" type="email" class="form-control"
       placeholder="Email">
-    <div class="ng-invalid" *ngIf="!email.valid">
+    <div class="ng-invalid" *ngIf="!temail.valid">
       Email cannot be blank
     </div>
+    <!-- <div class="ng-invalid" *ngIf="!temail.valid.email">
+      Email is invalid
+    </div> -->
   </div>
   <div class="form-group">
     <label for="txtCity">City</label>
-    <input #city=ngModel required name="city" [(ngModel)]="userdata.city" type="text" class="form-control" id="txtCity" placeholder="City">
+    <input #city=ngModel required name="city" [(ngModel)]="userdata.city" type="text" class="form-control" placeholder="City">
     <div class="ng-invalid" *ngIf="!city.valid">
       City cannot be blank
     </div>
   </div>
-  <button type="submit" class="btn btn-default">Submit</button>
+  <button [disabled]="!f.valid" type="submit" class="btn btn-default">Submit</button>
 </form>
